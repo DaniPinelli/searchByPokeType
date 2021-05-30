@@ -19,6 +19,7 @@
     padding-left: 74px;
     max-width: 220px;
     margin-top: 10px;
+    margin-left: 80px;
 }
 
 .logo {
@@ -38,7 +39,7 @@
     display: flex;
     place-self: flex-end;
     float: right;
-    margin-left: 496px;
+    margin-left: 412px;
 }
 
 .topNav a {
@@ -85,6 +86,11 @@ label {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5cd1", endColorstr="#437c23", GradientType=1);
 }
 
+.subContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
 
 .foot {
     color: rgb(6, 6, 100);
@@ -119,6 +125,7 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 36px;
 
     }
 
