@@ -1,0 +1,77 @@
+.container {
+    margin-top: 0;
+    margin-left: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+}
+
+header {
+    min-height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.logoDiv {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 74px;
+    max-width: 220px;
+}
+
+.logo {
+    height: 45px;
+}
+
+.logoText {
+    font-size: 21px;
+    font-weight: bold;
+    padding-left: 12px;
+    margin-top: 16px;
+    color: rgb(6, 54, 25);
+}
+
+.topNav {
+    padding-right: 46px;
+    padding-top: 38px;
+}
+
+.topNav a {
+    text-decoration: none;
+    padding: 6px;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(6, 54, 25);
+}
+
+.pokeTitle {
+    color: rgb(6, 54, 25);
+    text-align: center;
+    font-size: 42px;
+    margin-top: 68px;
+    font-weight: bold;
+}
+
+
+.foot {
+    color: rgb(6, 6, 100);
+    font-weight: bold;
+    text-align: center;
+}
+
+.fas {
+    visibility: hidden;
+}
+
+@media (max-width: 479px) {
+    .topNav {
+        display: none;
+    }
+
+    .fas {
+        visibility: visible;
+    }
+}
