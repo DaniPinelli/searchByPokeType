@@ -17,6 +17,7 @@ header {
 
 .logoDiv {
     display: flex;
+    float: left;
     padding-top: 20px;
     padding-left: 74px;
     max-width: 220px;
@@ -55,6 +56,34 @@ header {
     font-weight: bold;
 }
 
+.searchZone {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+label {
+    border-radius: 30px;
+    border-style: solid;
+    min-width: 540px;
+    height: 44px;
+}
+
+.button {
+    padding: 14px 46px;
+    border-radius: 30px;
+    border-style: solid;
+    margin-top: 2px;
+    margin-left: 12px;
+    color: white;
+    font-size: 12px;
+    background: rgb(63, 92, 209);
+    background: -moz-linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
+    background: -webkit-linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
+    background: linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5cd1", endColorstr="#437c23", GradientType=1);
+}
+
 
 .foot {
     color: rgb(6, 6, 100);
@@ -66,12 +95,15 @@ header {
     visibility: hidden;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 770px) {
     .topNav {
         display: none;
     }
 
     .fas {
         visibility: visible;
+        float: right;
+        margin-top: 32px;
+        margin-right: 32px;
     }
 }
