@@ -12,19 +12,23 @@ window.onload = () => {
                     name: data.name,
                     id: data.id,
                     image: data.sprites.front_default,
-                    type: [data.types[0].type.name]
+                    type: data.types[0].type.name
+
                 };
 
-                if (data.types[1].type.name != undefined) {
-                    pokemon.type.push(" " + data.types[1].type.name);
-                }
+                if (data.types.length > 1) {
+                    pokemon.type = (`${data.types[0].type.name}, ${data.types[1].type.name}`)
+                } else {
+                    pokemon.type = data.types[0].type.name
+                };
 
 
 
-                document.querySelector("div").innerHTML += " <div class='row'><div class='col-lg-4'><div class='card w-50'><div class='card-body\
+
+                document.querySelector("div").innerHTML += " <div class='card w-50'><div class='card-body\
                 '><img class='photo' src=" + pokemon.image + "><h5 class='card-title'>" + pokemon.name + "\
                 </h5><p class='card-text'>Type: " + pokemon.type + "\
-                </p><button class='btn btn-primary'>Add to favs</button></div></div></div></div>"
+                </p><button class='btn btn-primary'>Add to favs</button></div></div>"
 
             })
 

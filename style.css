@@ -104,6 +104,10 @@ label {
     visibility: hidden;
 }
 
+.each {
+    display: flex;
+}
+
 @media (max-width: 770px) {
     .topNav {
         display: none;
