@@ -64,7 +64,7 @@
     margin-top: 40px;
 }
 
-label {
+input {
     border-radius: 30px;
     border-style: solid;
     min-width: 506px;
@@ -93,7 +93,6 @@ label {
     margin-right: auto;
     flex-wrap: wrap;
     margin-top: 32px;
-    box-shadow: 2px 2px;
 }
 
 .item {
@@ -119,12 +118,12 @@ label {
     text-align: center;
     font-size: 23px;
     margin-top: 4px;
+    text-transform: capitalize;
 }
 
 
 .pokeP {
     text-align: center;
-    text-transform: capitalize;
     font-weight: bold;
     font-size: 13px;
 }
