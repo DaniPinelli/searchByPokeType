@@ -26,9 +26,9 @@ window.onload = () => {
 
 
                 document.querySelector(".pokeSubContainer").innerHTML += "<div class='item\
-                '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeTitle'>" + pokemon.name + "\
-                </h5><p class=' pokeP'>Type: " + pokemon.type + "\
-                </p><button class='btn btn-primary pokeButton'>Add to favs</button></div>"
+                '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>" + pokemon.name + "\
+                </h5><p class='pokeP'>Type: " + pokemon.type + "\
+                </p><button class='pokeButton'>Add to favs</button></div>"
 
             })
 
