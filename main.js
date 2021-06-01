@@ -1,6 +1,6 @@
 window.onload = () => {
 
-    for (let i = 1; i < 12; i++) {
+    for (let i = 1; i < 13; i++) {
         let url = "https://pokeapi.co/api/v2/pokemon/" + i;
         const arrayPoke = fetch(url)
             .then(response => response.json())
@@ -25,10 +25,10 @@ window.onload = () => {
 
 
 
-                document.querySelector("div").innerHTML += " <div class='card w-50'><div class='card-body\
-                '><img class='photo' src=" + pokemon.image + "><h5 class='card-title'>" + pokemon.name + "\
-                </h5><p class='card-text'>Type: " + pokemon.type + "\
-                </p><button class='btn btn-primary'>Add to favs</button></div></div>"
+                document.querySelector(".pokeSubContainer").innerHTML += "<div class='item\
+                '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeTitle'>" + pokemon.name + "\
+                </h5><p class=' pokeP'>Type: " + pokemon.type + "\
+                </p><button class='btn btn-primary pokeButton'>Add to favs</button></div>"
 
             })
 
