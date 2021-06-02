@@ -2,7 +2,7 @@ window.onload = () => {
 
 
 
-    for (let i = 1; i < 13; i++) {
+    for (let i = 1; i < 151; i++) {
         let url = "https://pokeapi.co/api/v2/pokemon/" + i;
         const arrayPoke = fetch(url)
             .then(response => response.json())
