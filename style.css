@@ -71,6 +71,10 @@ input {
     height: 44px;
 }
 
+input:focus {
+    outline: none;
+}
+
 .button {
     padding: 13px 46px;
     border-radius: 30px;
@@ -87,6 +91,15 @@ input {
 }
 
 .pokeSubContainer {
+    max-width: 888px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.pokeSubContainerSearch {
     max-width: 888px;
     display: flex;
     margin-left: auto;
@@ -158,6 +171,13 @@ input {
 @media (max-width: 770px) {
 
     .pokeSubContainer {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pokeSubContainerSearch {
         justify-content: center;
         display: flex;
         flex-direction: column;
