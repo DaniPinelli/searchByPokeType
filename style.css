@@ -90,6 +90,10 @@ input:focus {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5cd1", endColorstr="#437c23", GradientType=1);
 }
 
+.button:focus {
+    outline: none;
+}
+
 .pokeSubContainer {
     max-width: 888px;
     display: flex;

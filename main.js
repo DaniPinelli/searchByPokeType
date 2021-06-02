@@ -55,7 +55,7 @@ window.onload = () => {
                     //let pokeName = indexOf(pokemon.name)
                     // console.log(pokeName);
 
-                    if (typeSearched == pokemon.name) {
+                    if (pokemon.name.includes(typeSearched)) {
                         document.getElementById("pokeSubContainer").style.display = 'none';
                         document.querySelector(".pokeSubContainerSearch").innerHTML += "<div class='item\
                                     '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>\
