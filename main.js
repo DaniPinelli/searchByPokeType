@@ -77,13 +77,13 @@ window.onload = () => {
         }
     }
 
-    /*window.addEventListener('keydown', () => {
-     if (searchField = "") {
-         showAll();
-         searchBtn.addEventListener('click', search);
-     }
+    window.addEventListener('keydown', () => {
+        if (document.getElementById('input').value === "") {
+            showAll();
+            searchBtn.addEventListener('click', search);
+        }
 
-});*/
+    });
 
     let searchBtn = document.getElementById('button');
     searchBtn.addEventListener('click', search);
