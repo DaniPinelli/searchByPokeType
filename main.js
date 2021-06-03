@@ -3,7 +3,7 @@ window.onload = () => {
 
 
     let showAll = () => {
-        for (let i = 1; i < 13; i++) {
+        for (let i = 1; i < 150; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
             const arrayPoke = fetch(url)
                 .then(response => response.json())
@@ -23,21 +23,20 @@ window.onload = () => {
                     };
 
 
+
                     document.querySelector(".pokeSubContainer").innerHTML += "<div class='item\
                  '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>" + pokemon.name + "\
                  </h5><p class='pokeP'>Type: " + pokemon.type + "\
                  </p><button class='pokeButton'>Add to favs</button></div>"
+
                 })
 
+                .catch(err => (console.log(err)));
         }
-
     }
-
-
-
     let search = () => {
 
-        for (let i = 1; i < 13; i++) {
+        for (let i = 1; i < 150; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
             const arrayPoke = fetch(url)
                 .then(response => response.json())
@@ -80,14 +79,11 @@ window.onload = () => {
     }
 
     window.addEventListener('keyup', () => {
-        console.log(document.getElementById('input').value)
         if (document.getElementById('input').value == "") {
             document.getElementById("pokeSubContainer").style.display = 'flex';
-            document.getElementById("pokeSubContainerSearch").style.display = 'none';
-            showAll();
-
-
-
+            searchBtn = document.getElementById('button');
+            searchBtn.addEventListener('click', search);
+            document.querySelector(".pokeSubContainerSearch").innerHTML = "<div></div>"
         }
 
     });

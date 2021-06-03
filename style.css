@@ -83,11 +83,9 @@ input:focus {
     margin-left: 12px;
     color: white;
     font-size: 12px;
-    background: rgb(63, 92, 209);
-    background: -moz-linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
-    background: -webkit-linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
-    background: linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5cd1", endColorstr="#437c23", GradientType=1);
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
 }
 
 .button:focus {
@@ -153,11 +151,9 @@ input:focus {
     margin-left: 11px;
     font-size: 12px;
     margin-bottom: 14px;
-    background: rgb(63, 92, 209);
-    background: -moz-linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
-    background: -webkit-linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
-    background: linear-gradient(90deg, rgba(63, 92, 209, 1) 64%, rgba(63, 96, 185, 1) 66%, rgba(64, 101, 159, 1) 68%, rgba(65, 106, 134, 1) 70%, rgba(67, 124, 35, 1) 72%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5cd1", endColorstr="#437c23", GradientType=1);
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #7F7FD5, #86A8E7);
+    background: linear-gradient(to right, #7F7FD5, #86A8E7);
 }
 
 .foot {
