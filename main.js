@@ -22,6 +22,7 @@ window.onload = () => {
                         pokemon.type = data.types[0].type.name
                     };
 
+
                     document.querySelector(".pokeSubContainer").innerHTML += "<div class='item\
                  '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>" + pokemon.name + "\
                  </h5><p class='pokeP'>Type: " + pokemon.type + "\
@@ -61,6 +62,7 @@ window.onload = () => {
                     if (pokemon.name.includes(typeSearched)) {
 
                         document.getElementById("pokeSubContainer").style.display = 'none';
+
                         document.querySelector(".pokeSubContainerSearch").innerHTML += "<div class='item\
                                     '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>\
                                     " + pokemon.name + "\
@@ -77,10 +79,15 @@ window.onload = () => {
         }
     }
 
-    window.addEventListener('keydown', () => {
-        if (document.getElementById('input').value === "") {
+    window.addEventListener('keyup', () => {
+        console.log(document.getElementById('input').value)
+        if (document.getElementById('input').value == "") {
+            document.getElementById("pokeSubContainer").style.display = 'flex';
+            document.getElementById("pokeSubContainerSearch").style.display = 'none';
             showAll();
-            searchBtn.addEventListener('click', search);
+
+
+
         }
 
     });
