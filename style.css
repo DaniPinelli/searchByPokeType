@@ -83,9 +83,9 @@ input:focus {
     margin-left: 12px;
     color: white;
     font-size: 12px;
-    background: #7F7FD5;
-    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: #0a94be;
+    background: -webkit-linear-gradient(to right, #0a94be, #3d9784);
+    background: linear-gradient(to right, #0a94be, #3d9784);
 }
 
 .button:focus {
@@ -121,7 +121,7 @@ input:focus {
 }
 
 .pokeImg {
-    background-color: rgb(133, 247, 247);
+    background-color: rgb(187, 218, 218);
     border-radius: 50%;
     height: 86px;
     padding: 6px;
@@ -151,9 +151,9 @@ input:focus {
     margin-left: 11px;
     font-size: 12px;
     margin-bottom: 14px;
-    background: #7F7FD5;
-    background: -webkit-linear-gradient(to right, #7F7FD5, #86A8E7);
-    background: linear-gradient(to right, #7F7FD5, #86A8E7);
+    background: #0a94be;
+    background: -webkit-linear-gradient(to right, #0a94be, #3d9784);
+    background: linear-gradient(to right, #0a94be, #3d9784);
 }
 
 .remove {

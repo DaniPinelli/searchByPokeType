@@ -3,7 +3,7 @@ window.onload = () => {
 
 
     let showAll = () => {
-        for (let i = 1; i < 151; i++) {
+        for (let i = 1; i < 13; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
             const arrayPoke = fetch(url)
                 .then(response => response.json())
@@ -23,24 +23,29 @@ window.onload = () => {
                     };
 
 
-
                     document.querySelector(".pokeSubContainer").innerHTML += "<div class='item\
                  '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>" + pokemon.name + "\
                  </h5><p class='pokeP'>Type: " + pokemon.type + "\
-                 </p><button class='pokeButton'>Add to favs</button></div>"
+                 </p><button class='pokeButton' id='pokeButton'>Add to favs</button></div>"
 
                 })
 
                 .catch(err => (console.log(err)));
         }
     }
+
+
     let search = () => {
 
-        for (let i = 1; i < 151; i++) {
+
+
+        for (let i = 1; i < 13; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
             const arrayPoke = fetch(url)
                 .then(response => response.json())
                 .then(data => {
+
+
 
                     let pokemon = {
                         name: data.name,
@@ -60,18 +65,19 @@ window.onload = () => {
 
                     if (pokemon.name.includes(typeSearched)) {
 
+
+
                         document.getElementById("pokeSubContainer").style.display = 'none';
 
                         document.querySelector(".pokeSubContainerSearch").innerHTML += "<div class='item\
                                     '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>\
                                     " + pokemon.name + "\
                                      </h5><p class='pokeP'>Type: " + pokemon.type + "\
-                                     </p><button class='pokeButton'>Add to favs</button></div>"
+                                     </p><button class='pokeButton' id='pokeButton'>Add to favs</button></div>"
 
                         searchBtn.removeEventListener('click', search);
 
                     }
-
 
                 })
                 .catch(err => (console.log(err)));
@@ -91,4 +97,22 @@ window.onload = () => {
     let searchBtn = document.getElementById('button');
     searchBtn.addEventListener('click', search);
     showAll();
+
+
+
+    let addToFavs = () => {
+        console.log("Click");
+        document.getElementById('pokeButton').style.display = 'none';
+    }
+
+    let pokeButton = document.getElementById('pokeButton');
+    pokeButton.onclick = addToFavs();
+
+
+
+
+
+
+
+
 }
