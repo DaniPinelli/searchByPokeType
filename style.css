@@ -156,6 +156,17 @@ input:focus {
     background: linear-gradient(to right, #7F7FD5, #86A8E7);
 }
 
+.remove {
+    padding: 13px 46px;
+    border-radius: 30px;
+    border-style: 3px solid blue;
+    color: blue;
+    margin-left: 11px;
+    font-size: 12px;
+    margin-bottom: 14px;
+    background: white;
+}
+
 .foot {
     color: rgb(6, 6, 100);
     font-weight: bold;

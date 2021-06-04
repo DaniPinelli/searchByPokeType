@@ -3,7 +3,7 @@ window.onload = () => {
 
 
     let showAll = () => {
-        for (let i = 1; i < 150; i++) {
+        for (let i = 1; i < 151; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
             const arrayPoke = fetch(url)
                 .then(response => response.json())
@@ -36,7 +36,7 @@ window.onload = () => {
     }
     let search = () => {
 
-        for (let i = 1; i < 150; i++) {
+        for (let i = 1; i < 151; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
             const arrayPoke = fetch(url)
                 .then(response => response.json())
