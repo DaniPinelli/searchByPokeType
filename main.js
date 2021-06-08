@@ -1,13 +1,21 @@
+function addToFav() {
+    console.log("click")
+}
+
 window.onload = () => {
+
+
 
 
 
     let showAll = () => {
         for (let i = 1; i < 13; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
-            const arrayPoke = fetch(url)
+            fetch(url)
                 .then(response => response.json())
                 .then(data => {
+
+
 
                     let pokemon = {
                         name: data.name,
@@ -22,26 +30,28 @@ window.onload = () => {
                         pokemon.type = data.types[0].type.name
                     };
 
-
                     document.querySelector(".pokeSubContainer").innerHTML += "<div class='item\
                  '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>" + pokemon.name + "\
                  </h5><p class='pokeP'>Type: " + pokemon.type + "\
-                 </p><button class='pokeButton' id='pokeButton'>Add to favs</button></div>"
+                 </p><button class='pokeButton' onclick='addToFavs()'>Add to favs</button></div>"
+
+
+
 
                 })
 
                 .catch(err => (console.log(err)));
         }
+
     }
+
 
 
     let search = () => {
 
-
-
         for (let i = 1; i < 13; i++) {
             let url = "https://pokeapi.co/api/v2/pokemon/" + i;
-            const arrayPoke = fetch(url)
+            fetch(url)
                 .then(response => response.json())
                 .then(data => {
 
@@ -73,7 +83,7 @@ window.onload = () => {
                                     '><img class='photo pokeImg' src=" + pokemon.image + "><h5 class='card-title pokeItemTitle'>\
                                     " + pokemon.name + "\
                                      </h5><p class='pokeP'>Type: " + pokemon.type + "\
-                                     </p><button class='pokeButton' id='pokeButton'>Add to favs</button></div>"
+                                     </p><button class='pokeButton' onclick='addToFavs()'>Add to favs</button></div>"
 
                         searchBtn.removeEventListener('click', search);
 
@@ -83,6 +93,10 @@ window.onload = () => {
                 .catch(err => (console.log(err)));
         }
     }
+
+
+
+
 
     window.addEventListener('keyup', () => {
         if (document.getElementById('input').value == "") {
@@ -94,23 +108,13 @@ window.onload = () => {
 
     });
 
+
+
     let searchBtn = document.getElementById('button');
     searchBtn.addEventListener('click', search);
+
+
     showAll();
-
-
-
-    let addToFavs = () => {
-        console.log("Click");
-        document.getElementById('pokeButton').style.display = 'none';
-    }
-
-    let pokeButton = document.getElementById('pokeButton');
-    pokeButton.onclick = addToFavs();
-
-
-
-
 
 
 
