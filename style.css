@@ -157,9 +157,10 @@ input:focus {
 }
 
 .remove {
+    display: none;
     padding: 13px 46px;
     border-radius: 30px;
-    border-style: 3px solid blue;
+    border-style: 3px solid rgb(34, 180, 247);
     color: blue;
     margin-left: 11px;
     font-size: 12px;
