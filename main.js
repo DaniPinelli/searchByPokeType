@@ -1,16 +1,24 @@
 let arrayPoke = [];
+let myFavs = [];
 
 let addToFavs = (addBtn) => {
+
     addBtn.style.display = "none";
     let id = addBtn.id;
-    let btnRemove = document.getElementsByClassName("rem" + id);
+    let btnRemove = document.getElementsByClassName(`rem${id}`);
     btnRemove[0].style.display = "inline-block";
+
+    localStorage.setItem('myFavs', JSON.stringify(myFavs));
+    let arrayLocal = localStorage.getItem('myFavs');
+    arrayLocal = arrayLocal ? arrayLocal.split(',') : [];
+    arrayLocal(arrayPoke[id]);
+    localStorage.setItem('myFavs', arrayLocal.toString());
 }
 
 let removeToFavs = (remBtn) => {
     remBtn.style.display = "none";
     let id = remBtn.id;
-    let btnAdd = document.getElementsByClassName("add" + id);
+    let btnAdd = document.getElementsByClassName(`add${id}`);
     btnAdd[0].style.display = "inline-block";
 }
 
@@ -81,5 +89,6 @@ let showPoke = async () => {
     });
 
 }
+
 
 showPoke();
