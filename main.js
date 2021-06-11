@@ -8,11 +8,12 @@ let addToFavs = (addBtn) => {
     let btnRemove = document.getElementsByClassName(`rem${id}`);
     btnRemove[0].style.display = "inline-block";
 
-    localStorage.setItem('myFavs', JSON.stringify(myFavs));
-    let arrayLocal = localStorage.getItem('myFavs');
-    arrayLocal = arrayLocal ? arrayLocal.split(',') : [];
-    arrayLocal(arrayPoke[id]);
-    localStorage.setItem('myFavs', arrayLocal.toString());
+
+    let pokemon = arrayPoke[id];
+    myFavs.push(pokemon);
+    let myFavsJSON = JSON.stringify(myFavs);
+    localStorage.setItem("myFavs", myFavsJSON);
+
 }
 
 let removeToFavs = (remBtn) => {
@@ -20,6 +21,12 @@ let removeToFavs = (remBtn) => {
     let id = remBtn.id;
     let btnAdd = document.getElementsByClassName(`add${id}`);
     btnAdd[0].style.display = "inline-block";
+
+    let myFavsArray = JSON.parse(localStorage.getItem("myFavs"));
+    let pokeIndex = myFavsArray.findIndex(poke => poke.id == id);
+    pokeIndex.splice(pokeIndex, 1);
+    let pokeArrayJSON = JSON.stringify(myFavsArray);
+    localStorage.setItem("myFavs", pokeArrayJSON);
 }
 
 let showPoke = async () => {
