@@ -31,11 +31,11 @@ let removeToFavs = (remBtn) => {
     let btnAdd = document.getElementsByClassName(`add${idPoke}`);
     btnAdd[0].style.display = "inline-block";
 
-    let idLessOne = (idPoke - 1);
+
     let myFavsArray = JSON.parse(localStorage.getItem("myFavs"));
-    let newArray = myFavsArray.filter(pokemon => pokemon.id[idPoke] === pokemon.id[idPoke]);
-    newArray.splice(newArray, 1);
-    let pokeArrayJSON = JSON.stringify(newArray);
+    let pokeIndex = myFavsArray.findIndex(pokemon => pokemon.id == idPoke);
+    myFavsArray.splice(pokeIndex, 1);
+    let pokeArrayJSON = JSON.stringify(myFavsArray);
     localStorage.setItem("myFavs", pokeArrayJSON);
 }
 
