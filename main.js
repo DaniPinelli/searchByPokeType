@@ -1,15 +1,23 @@
 let arrayPoke = [];
-let myFavs = [];
+
 
 let addToFavs = (addBtn) => {
 
+
     addBtn.style.display = "none";
-    let id = addBtn.id;
-    let btnRemove = document.getElementsByClassName(`rem${id}`);
+    let idPoke = addBtn.id;
+    let btnRemove = document.getElementsByClassName(`rem${idPoke}`);
     btnRemove[0].style.display = "inline-block";
 
+    let idLessOne = (idPoke - 1);
 
-    let pokemon = arrayPoke[id];
+    if (JSON.parse(localStorage.getItem("myFavs")) !== null) {
+        myFavs = JSON.parse(localStorage.getItem("myFavs"));
+    } else {
+        myFavs = [];
+    }
+
+    let pokemon = arrayPoke[idLessOne];
     myFavs.push(pokemon);
     let myFavsJSON = JSON.stringify(myFavs);
     localStorage.setItem("myFavs", myFavsJSON);
@@ -17,17 +25,20 @@ let addToFavs = (addBtn) => {
 }
 
 let removeToFavs = (remBtn) => {
+
     remBtn.style.display = "none";
-    let id = remBtn.id;
-    let btnAdd = document.getElementsByClassName(`add${id}`);
+    let idPoke = remBtn.id;
+    let btnAdd = document.getElementsByClassName(`add${idPoke}`);
     btnAdd[0].style.display = "inline-block";
 
+    let idLessOne = (idPoke - 1);
     let myFavsArray = JSON.parse(localStorage.getItem("myFavs"));
-    let pokeIndex = myFavsArray.findIndex(poke => poke.id == id);
-    pokeIndex.splice(pokeIndex, 1);
-    let pokeArrayJSON = JSON.stringify(myFavsArray);
+    let newArray = myFavsArray.filter(pokemon => pokemon.id[idPoke] === pokemon.id[idPoke]);
+    newArray.splice(newArray, 1);
+    let pokeArrayJSON = JSON.stringify(newArray);
     localStorage.setItem("myFavs", pokeArrayJSON);
 }
+
 
 let showPoke = async () => {
     for (let i = 1; i < 13; i++) {
