@@ -101,7 +101,7 @@ input:focus {
     margin-top: 32px;
 }
 
-.pokeSubContainerSearch {
+.localContainer {
     max-width: 888px;
     display: flex;
     margin-left: auto;
@@ -168,7 +168,19 @@ input:focus {
     background: white;
 }
 
+.removeFavs {
+    padding: 13px 46px;
+    border-radius: 30px;
+    border-style: 3px solid rgb(34, 180, 247);
+    color: blue;
+    margin-left: 20px;
+    font-size: 12px;
+    margin-bottom: 14px;
+    background: white;
+}
+
 .foot {
+    padding-top: 60px;
     color: rgb(6, 6, 100);
     font-weight: bold;
     text-align: center;
