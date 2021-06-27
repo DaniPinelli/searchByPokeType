@@ -10,4 +10,16 @@ let printFavs = () => {
   }
 };
 
+let removeToFavs = (remBtn) => {
+  console.log(remBtn);
+  let idPoke = remBtn.id;
+
+  let myFavsArray = JSON.parse(localStorage.getItem("myFavs"));
+  let pokeIndex = myFavsArray.findIndex((pokemon) => pokemon.id == idPoke);
+  myFavsArray.splice(pokeIndex, 1);
+  let pokeArrayJSON = JSON.stringify(myFavsArray);
+  localStorage.setItem("myFavs", pokeArrayJSON);
+  window.location.reload();
+};
+
 printFavs();
