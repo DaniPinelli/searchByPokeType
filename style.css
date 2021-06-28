@@ -190,6 +190,14 @@ input:focus {
     visibility: hidden;
 }
 
+.disappear{
+    display: none;
+}
+
+.showRemove{
+    display:inline-block;
+}
+
 
 
 @media (max-width: 770px) {

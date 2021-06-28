@@ -34,13 +34,6 @@ let removeToFavs = (remBtn) => {
 };
 
 let showPoke = async () => {
-  let initialArray = JSON.parse(localStorage.getItem("myFavs"));
-  if (initialArray.length !== 0) {
-    for (let i = 0; i < initialArray.length; i++) {
-      console.log(initialArray[i].id);
-    }
-  }
-
   for (let i = 1; i < 13; i++) {
     let pokesData = await fetch("https://pokeapi.co/api/v2/pokemon/" + i);
     const poke = await pokesData.json();
@@ -72,6 +65,21 @@ let showPoke = async () => {
     }
   };
   print();
+
+  let initialArray = JSON.parse(localStorage.getItem("myFavs"));
+  if (initialArray.length !== 0) {
+    for (let i = 0; i < initialArray.length; i++) {
+      let btnAddLocal = await document.getElementsByClassName(
+        `add${initialArray[i].id}`
+      );
+      let btnRemLocal = await document.getElementsByClassName(
+        `rem${initialArray[i].id}`
+      );
+      btnAddLocal[0].classList.add("disappear");
+      btnRemLocal[0].classList.add("showRemove");
+      //console.log(btnAddLocal[0]);
+    }
+  }
 };
 
 let search = () => {
