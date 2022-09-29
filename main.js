@@ -34,7 +34,7 @@ let removeToFavs = (remBtn) => {
 };
 
 let showPoke = async () => {
-  for (let i = 1; i < 151; i++) {
+  for (let i = 1; i < 25; i++) {
     let pokesData = await fetch("https://pokeapi.co/api/v2/pokemon/" + i);
     const poke = await pokesData.json();
 
